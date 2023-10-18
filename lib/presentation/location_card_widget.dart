@@ -88,7 +88,7 @@ class LocationContainer extends StatelessWidget {
           BoxShadow(
             color: Colors.black38,
             offset: Offset(1, 3),
-            blurRadius: 5,
+            blurRadius: 3,
             spreadRadius: 2,
           ),
         ],
@@ -114,12 +114,12 @@ class LocationContainer extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           _locationName(item),
+                          _rating(item),
                           if (item.streetName != "") ...[
                             _cityText(context),
                           ] else ...[
                             SizedBox(height: 10.h),
                           ],
-                          SizedBox(height: 5.h),
                           Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -132,6 +132,7 @@ class LocationContainer extends StatelessWidget {
                                   ],
                                 ),
                               ]),
+                          SizedBox(height: 3.h),
                         ],
                       ),
                     ),
@@ -155,6 +156,39 @@ class LocationContainer extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Widget _rating(LocationEntity item) {
+    int rating = _calculateRating(item.matchQuality);
+    return Row(
+      children: [
+        ...List<Widget>.generate(
+            rating,
+            (index) => Icon(Icons.thumb_up,
+                size: 14.h, color: AppTheme.colorScheme.tertiary)),
+        ...List<Widget>.generate(
+            5 - rating,
+            (index) => Icon(Icons.thumb_up_alt_outlined,
+                size: 14.h, color: AppTheme.colorScheme.tertiary)),
+      ],
+    );
+  }
+
+  int _calculateRating(int matchScore) {
+    switch (matchScore) {
+      case > 215:
+        return 5;
+      case > 180:
+        return 4;
+      case > 120:
+        return 3;
+      case > 50:
+        return 2;
+      case > 10:
+        return 1;
+      default:
+        return 0;
+    }
   }
 
   Widget _cityText(BuildContext context) {

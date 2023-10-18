@@ -149,6 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (itineraryState.result.isEmpty) {
       return _noResults();
     } else {
+      itineraryState.result.sort((a, b) => b.matchQuality.compareTo(a.matchQuality));
       return Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: ListView.builder(
@@ -175,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage> {
           height: 100.h,
         ),
         Image.asset(
-          'assets/icons/sad.png',
+          'assets/icons/sad_2.png',
           width: 180.w,
           height: 180.h,
         ),

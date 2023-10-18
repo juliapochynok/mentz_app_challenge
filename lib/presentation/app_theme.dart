@@ -26,16 +26,16 @@ class AppTheme {
 
   static final TextTheme textTheme = TextTheme(
     headlineLarge: TextStyle(
-      fontFamily: 'spaceGrotesk',
+      fontFamily: 'SpaceGrotesk',
       color: colorScheme.primaryContainer,
       fontSize: 22.sp,
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.normal,
       fontStyle: FontStyle.normal,
       height: 1,
       letterSpacing: 0,
     ),
     titleMedium: TextStyle(
-      fontFamily: 'spaceGrotesk',
+      fontFamily: 'SpaceGrotesk',
       color: colorScheme.onBackground,
       fontSize: 16.sp,
       fontWeight: FontWeight.w600,
@@ -44,7 +44,7 @@ class AppTheme {
       letterSpacing: 0,
     ),
     bodyLarge: TextStyle(
-      fontFamily: 'spaceGrotesk',
+      fontFamily: 'SpaceGrotesk',
       color: colorScheme.onBackground,
       fontSize: 16.sp,
       fontWeight: FontWeight.normal,
@@ -53,16 +53,16 @@ class AppTheme {
       letterSpacing: 0,
     ),
     bodySmall: TextStyle(
-      fontFamily: 'spaceGrotesk',
+      fontFamily: 'SpaceGrotesk',
       color: colorScheme.onBackground,
       fontSize: 12.sp,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.normal,
       fontStyle: FontStyle.normal,
       height: 1.5,
       letterSpacing: 0.4.sp,
     ),
     labelMedium: TextStyle(
-      fontFamily: 'spaceGrotesk',
+      fontFamily: 'SpaceGrotesk',
       color: colorScheme.onBackground,
       fontSize: 14.sp,
       fontWeight: FontWeight.w500,
@@ -71,7 +71,7 @@ class AppTheme {
       letterSpacing: 0,
     ),
     labelSmall: TextStyle(
-      fontFamily: 'spaceGrotesk',
+      fontFamily: 'SpaceGrotesk',
       color: colorScheme.onBackground,
       fontSize: 12.sp,
       fontWeight: FontWeight.w500,

@@ -19,23 +19,31 @@ dependencies:
   flutter_lints: ^2.0.0
   carousel_slider: ^4.0.0
   shared_preferences: ^2.0.17
+  flutter_launcher_icons: ^0.13.1
+  google_fonts: ^4.0.0
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/location_2.png"
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
-  uses-material-design: true
-
   assets:
+    - assets/google_fonts/
     - assets/icons/
+
   fonts:
-    - family: youngSerif
+    - family: SpaceGrotesk
       fonts:
-        - asset: assets/fonts/YoungSerif-Regular.ttf
-    - family: tiltNeon
-      fonts:
-        - asset: assets/fonts/TiltNeon.ttf
-    - family: spaceGrotesk
-      fonts:
-        - asset: assets/fonts/SpaceGrotesk.ttf
+        - asset: assets/google_fonts/SpaceGrotesk.ttf
+        - asset: assets/google_fonts/SpaceGrotesk-Bold.ttf
+        - asset: assets/google_fonts/SpaceGrotesk-Light.ttf
+        - asset: assets/google_fonts/SpaceGrotesk-Medium.ttf
+        - asset: assets/google_fonts/SpaceGrotesk-Regular.ttf
+        - asset: assets/google_fonts/SpaceGrotesk-SemiBold.ttf
+
+  uses-material-design: true
