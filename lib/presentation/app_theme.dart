@@ -80,4 +80,17 @@ class AppTheme {
       letterSpacing: 0,
     ),
   );
+
+
+  static final ThemeData defaultTheme = ThemeData(
+    useMaterial3: true,
+    fontFamily: "SpaceGrotesk",
+    textTheme: textTheme,
+    primaryTextTheme: textTheme,
+    canvasColor: Color(0xFFF9F9F9),
+    colorScheme: colorScheme,
+    primaryColor: colorScheme.primary,
+    primaryColorLight: Color(0xFFF9F9F9),
+    scaffoldBackgroundColor: colorScheme.background,
+  );
 }

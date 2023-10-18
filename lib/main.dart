@@ -26,10 +26,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: 'App Challenge',
             debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              scaffoldBackgroundColor: AppTheme.colorScheme.primaryContainer,
-              useMaterial3: true,
-            ),
+            theme: AppTheme.defaultTheme,
             home: BlocProvider<HomeScreenBloc>(
               create: (context) => HomeScreenBloc(),
               child: const MyHomePage(title: 'Plan your journey'),
